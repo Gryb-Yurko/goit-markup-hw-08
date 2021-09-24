@@ -16,9 +16,10 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+ 
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
@@ -117,9 +118,9 @@ body {
 }
 
 /* ----------------------------SPECIALITY------------------ */
-/* .section {
-    
-} */
+.section {
+  outline: 2px solid tomato;
+}
 /* .speciality {
 
 } */
