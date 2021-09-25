@@ -16,7 +16,6 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
- 
 }
 
 a {
@@ -25,6 +24,8 @@ a {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .btn {
@@ -32,12 +33,16 @@ a {
   text-align: center;
   border: transparent;
   cursor: pointer;
+  border-radius: 4px;
+}
+.container {
+  width: 1200px;
 }
 
 /*----------------------HEADER----------------- */
-/* .header {
-    
-} */
+.header {
+  background-color: red;
+}
 
 .logo-web {
   color: var(--logo-web-color);
@@ -88,9 +93,15 @@ a {
 /*----------------------HERO----------------- */
 .hero {
   background-color: #2f303a;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 280px;
 }
 
 .hero-title {
+  padding-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -98,28 +109,28 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-text-color);
+  outline: 2px solid tomato;
 }
 
 .hero-button {
+  width: 200px;
+  height: 50px;
   font-family: inherit;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  border: transparent;
   background-color: var(--hover-color);
   color: var(--third-text-color);
-  cursor: pointer;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   color: var(--third-text-color);
-  background: #188CE8;
+  background: #188ce8;
 }
 
 /* ----------------------------SPECIALITY------------------ */
 .section {
-  outline: 2px solid tomato;
 }
 /* .speciality {
 
@@ -254,4 +265,5 @@ a {
   line-height: 1.87x;
   color: var(--secondary-text-color);
 }
-
+.projects-content {
+}
