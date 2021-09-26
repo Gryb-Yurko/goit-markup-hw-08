@@ -184,12 +184,18 @@ img {
 
 /* ----------------------------SPECIALITY------------------ */
 
-/* .speciality {
+.speciality {
+  display: flex;
+}
 
-} */
-/* .speciality-item {
+.speciality-item {
+  flex-basis: calc(100% / 4);
+}
 
-} */
+.speciality-item:not(:last-child) {
+  margin-right: var(--section-services-gap);
+}
+
 .speciality-title {
   font-weight: 700;
   font-size: 14px;
@@ -199,14 +205,28 @@ img {
 }
 
 .speciality-text {
+  margin-top: 10px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
 }
 
-/* ----------------------------DOING------------------ */
+/* ----------------------------ЧЕМ МЫ ЗАНИМАЕМСЯ------------------ */
 
-.doing-title {
+.work-section {
+  padding-top: 0px;
+}
+
+.work {
+  margin-top: 50px;
+  display: flex;
+}
+
+.work-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -214,23 +234,32 @@ img {
   color: var(--primary-text-color);
 }
 
-/* .doing-item {
-
-} */
+.work-item {
+}
 /* ----------------------------TEAM------------------ */
-.team {
-  background: var(--secondary-background-color);
-}
 
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: var(--primary-text-color);
+.team-section {
+  padding: 94px 0px;
+  background: var(--bachgroun-button-portfolio);
+}
+.team-list {
+  display: flex;
 }
 
 .team-item {
+  background: var(--secondary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
   background: var(--third-text-color);
 }
 
@@ -243,6 +272,7 @@ img {
 }
 
 .team-text {
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -300,6 +330,7 @@ img {
 }
 
 /* ----------------------------PORTFOLIO------------------ */
+
 .filters-list {
   display: flex;
   justify-content: center;
