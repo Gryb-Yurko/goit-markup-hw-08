@@ -21,7 +21,6 @@ body {
 
 a {
   text-decoration: none;
-  padding: 0;
 }
 
 h1,
@@ -118,6 +117,10 @@ img {
 
 .site-nav-link:hover,
 .site-nav-link:focus {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 32px;
+  margin-bottom: 32px;
   color: var(--hover-color);
 }
 
