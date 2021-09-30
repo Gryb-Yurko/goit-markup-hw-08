@@ -37,8 +37,10 @@ img {
   height: auto;
 }
 
-.list {
+ul {
   list-style: none;
+  text-decoration: none;
+  padding: 0;
 }
 
 .btn {
@@ -67,7 +69,6 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 .header-logo {
@@ -76,7 +77,6 @@ img {
   font-size: 26px;
   line-height: 1.19;
   border: none;
-  text-decoration: none;
 
   color: #000000;
   background-color: var(--fourth-background-color);
@@ -154,7 +154,7 @@ img {
 /*----------------------HERO----------------- */
 .hero {
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 
   text-align: center;
 
@@ -162,11 +162,10 @@ img {
 }
 
 .hero-title {
-  padding-bottom: 30px;
   margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 900;
+  margin-bottom: 30px;
 
+  font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
@@ -195,17 +194,24 @@ img {
 }
 
 /* ----------------------------SPECIALITY------------------ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 
 .speciality {
   display: flex;
 }
 
 .speciality-item {
+  margin-right: 30px;
   flex-basis: calc(100% / 4);
-}
-
-.speciality-item:not(:last-child) {
-  margin-right: var(--section-services-gap);
 }
 
 .speciality-title {
@@ -255,12 +261,11 @@ img {
 /* ----------------------------TEAM------------------ */
 
 .team-section {
-  padding: 94px 0px;
-
-  background: var(--bachgroun-button-portfolio);
+  background-color: var(--secondary-background-color);
 }
 .team-list {
   display: flex;
+  margin-top: 50px;
 }
 
 .team-item {
@@ -274,6 +279,8 @@ img {
 .team-container {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  background-color: var(--fourth-background-color);
 }
 
 .team-item:not(:last-child) {
@@ -359,6 +366,7 @@ img {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  text-decoration: none;
 }
 
 .filters-btn {
