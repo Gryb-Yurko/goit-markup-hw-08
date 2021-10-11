@@ -18,6 +18,7 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  background-color: var(--fourth-background-color);
 }
 
 a {
@@ -28,6 +29,7 @@ h1,
 h2,
 h3,
 ul,
+li,
 p {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -107,6 +109,7 @@ ul {
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .header-logo {
@@ -141,6 +144,7 @@ ul {
 }
 
 .site-nav-link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -151,19 +155,31 @@ ul {
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav-link.current {
+  color: var(--hover-color);
 }
 
 .site-nav-link:hover,
 .site-nav-link:focus {
-  padding-top: 0;
+  /* padding-top: 0;
   padding-bottom: 0;
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 32px; */
   color: var(--hover-color);
 }
 
-.current {
-  color: var(--hover-color);
+.site-nav-link.current:after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--hover-color);
 }
 
 .header-contacts {
@@ -204,6 +220,7 @@ ul {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -305,6 +322,9 @@ ul {
   margin-top: 50px;
   display: flex;
 }
+.work-item {
+  position: relative;
+}
 
 .work-item:not(:last-child) {
   margin-right: 30px;
@@ -317,6 +337,24 @@ ul {
   text-align: center;
 
   color: var(--primary-text-color);
+}
+
+.work-text {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--secondary-title-color);
 }
 
 /* ----------------------------TEAM------------------ */
@@ -492,6 +530,7 @@ ul {
 
   fill: var(--third-text-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-network-link:hover,
@@ -548,11 +587,13 @@ ul {
 }
 
 /* .projects-link {
+
 } */
 
 .projects-link:hover,
 .projects-link:focus {
   display: block;
+  transform: translateY(0);
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -581,4 +622,90 @@ ul {
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
+}
+
+.overlay-projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 18;
+  letter-spacing: 0.03em;
+  line-height: 1.56;
+
+  background: rgba(33, 150, 243, 0.9);
+  color: var(--third-text-color);
+}
+
+.projects-link:hover .text-overlay,
+.projects-link:focus .text-overlay {
+  transform: translateX(0);
+}
+
+.paragraph-overlay {
+  padding-right: 24px;
+  padding-left: 24px;
+  text-align: left;
+}
+
+/* ---------------------MODAL----------------------- */
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  position: absolute;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: var(--fourth-background-color);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--fourth-background-color);
+
+  cursor: pointer;
+  padding: 0;
 }
