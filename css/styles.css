@@ -93,6 +93,9 @@ ul {
 
   background-color: var(--fourth-background-color);
   fill: var(--social-network-icon-background);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network-icon-link:hover,
@@ -434,6 +437,9 @@ ul {
 
   color: var(--social-network-icon-background);
   fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -559,6 +565,10 @@ ul {
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-btn:hover,
@@ -586,9 +596,9 @@ ul {
   margin-top: var(--sections-services-gap);
 }
 
-/* .projects-link {
-
-} */
+.projects-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .projects-link:hover,
 .projects-link:focus {
@@ -679,6 +689,8 @@ ul {
 
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -691,6 +703,7 @@ ul {
   min-width: 528px;
   min-height: 581px;
   position: absolute;
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background-color: var(--fourth-background-color);
