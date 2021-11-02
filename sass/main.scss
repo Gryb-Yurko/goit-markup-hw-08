@@ -1,0 +1,21 @@
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/commons-style';
+
+// -----------------СТУДИЯ---------------
+@import './components/logo';
+@import './components/header';
+@import './components/button';
+@import './components/hero';
+@import './components/speciality';
+@import './components/work';
+@import './components/team';
+@import './components/client';
+@import './components/footer';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/icons';
+
+// --------------------ПОРТФОЛИО----------------
+@import './components/filters';
+@import './components/projects';

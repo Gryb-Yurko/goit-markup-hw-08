@@ -1,0 +1,141 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+}
+
+.footer-section {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  flex-grow: 1;
+  margin-right: 70px;
+}
+
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.address {
+  margin-top: 20px;
+  font-style: inherit;
+}
+
+.address-item {
+  &:not(:first-child) {
+    margin-top: 9px;
+  }
+}
+
+.address-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--third-text-color);
+}
+
+.address-contacts-link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--third-text-color);
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
+
+.strong {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
+
+.footer-network-list {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-network-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer-network-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 22px;
+  height: 44px;
+  width: 44px;
+
+  fill: var(--third-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-color);
+  }
+}
+
+.footer-sabscription {
+  margin-left: 93px;
+}
+
+.sabscription {
+  display: flex;
+  margin-top: 20px;
+}
+
+.input-sabscription {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 14px;
+  color: var(--third-text-color);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--hover-color);
+  }
+}
+
+.sabscribe-btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 29px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--hover-color);
+  color: var(--third-text-color);
+  border-radius: 4px;
+  border: none;
+}
