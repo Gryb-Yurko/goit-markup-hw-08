@@ -1,9 +1,9 @@
-.client-list {
+.client__list {
   display: flex;
   justify-content: center;
 }
 
-.client-item {
+.client__item {
   margin-top: 50px;
 
   &:not(:last-child) {
@@ -11,7 +11,7 @@
   }
 }
 
-.client-link {
+.client__link {
   display: flex;
   justify-content: center;
   align-items: center;

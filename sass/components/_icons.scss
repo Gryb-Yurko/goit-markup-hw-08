@@ -1,22 +1,21 @@
-.icon-mail,
-.icon-smartphone {
+.contacts__icon {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.social-network-icon-list {
+.social {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
 
-.social-network-icon-item {
+.social__item {
   &:not(:last-child) {
     margin-right: 10px;
   }
 }
 
-.social-network-icon-link {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +37,6 @@
   }
 }
 
-.icon-sabscription {
+.icon__sabscription {
   margin-left: 10px;
 }
