@@ -104,15 +104,13 @@ ul {
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-.nav {
-  margin-left: 93px;
-}
-
-.nav__list {
-  display: flex;
+@media screen and (min-widht: 768p) {
+  .header__container {
+    height: 80px;
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -121,7 +119,6 @@ ul {
 
 .nav__link {
   position: relative;
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -231,6 +228,16 @@ ul {
   margin-top: 30px;
 }
 
+.speciality__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+}
+
 .speciality__item {
   margin-right: 30px;
   flex-basis: calc(100% / 4);
@@ -238,17 +245,6 @@ ul {
 
 .speciality__item:not(:last-child) {
   margin-right: 30px;
-}
-
-.speciality__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  background-color: var(--secondary-background-color);
 }
 
 .speciality__title {
@@ -303,7 +299,7 @@ ul {
   background-color: var(--secondary-background-color);
 }
 
-.team__list {
+.team {
   display: flex;
   margin-top: 50px;
 }
@@ -325,7 +321,7 @@ ul {
   background-color: var(--fourth-background-color);
 }
 
-.team__member-title {
+.team__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -341,7 +337,7 @@ ul {
   color: var(--secondary-text-color);
 }
 
-.client__list {
+.client {
   display: flex;
   justify-content: center;
 }
@@ -493,11 +489,6 @@ ul {
   border: none;
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -508,6 +499,11 @@ ul {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -547,11 +543,11 @@ ul {
   color: var(--hover-color);
 }
 
-.modal__form {
+.form {
   padding: 40px;
 }
 
-.modal__title {
+.form__title {
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -741,7 +737,7 @@ ul {
   margin-left: 10px;
 }
 
-.filters__list {
+.filters {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -771,7 +767,7 @@ ul {
   margin-right: 10px;
 }
 
-.projects__list {
+.projects {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--sections-services-gap));
